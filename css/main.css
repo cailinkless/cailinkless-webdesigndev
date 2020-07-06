@@ -286,7 +286,7 @@ copyright {
   flex: auto;
 }
 
-#about-wrapper.bottom-section copyright {
+copyright.content-page {
   position: relative;
 }
 
