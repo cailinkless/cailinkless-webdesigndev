@@ -1,0 +1,559 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*** Homescreen Styles ***/
+
+html,
+body {
+  color: #ffffff;
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background-color: #000000;
+  position: relative;
+}
+
+.main-content {
+  flex: 0 1 auto;
+}
+
+.top-section {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap-reverse;
+  background: url('../img/toppng.com-black-and-white-cat-computer-keyboard-wallpaper-1920x1280.jpg') center no-repeat;
+  background-size: cover;
+  height: 0;
+  padding-top: 66.66%;/*56.25%; /* (img-height / img-width * container-width) */
+                /* (1280 / 1920 * 100) */
+  position: relative;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  right: 5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 1.75em;
+  padding-right: 1.75em;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav ul li {
+  padding-bottom: 1.5em;
+}
+
+nav ul li a {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#home-button:hover,
+#home-button:active,
+#home-button.active-page {
+  color: #E6006B;
+}
+
+#about-button:hover,
+#about-button:active,
+#about-button.active-page {
+  color: #D16515;
+}
+
+#portfolio-button:hover,
+#portfolio-button:active,
+#portfolio-button.active-page {
+  color: #8F75D1;
+}
+
+#contact-button:hover,
+#contact-button:active,
+#contact-button.active-page {
+  color: #43C4D1;
+}
+
+#landscape-header {
+  font-family: 'Alice', serif;
+  margin: 0;
+  position: absolute;
+  top: 2em;
+  right: 10em;
+}
+
+header {
+  background-color: #000000;
+  font-family: 'Alice', serif;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 35px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 25px;
+  margin: 0;
+}
+
+h3 {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 26px;
+}
+
+h4 {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 20px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.slogan {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.line1 {
+  padding-left: 2.5em;
+}
+
+.line2 {
+  padding-left: 5.5em;
+}
+
+.bottom-section {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: url('../img/codebw.jpg') center no-repeat gray;
+  background-size: cover;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+copyright {
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  text-align: center;
+}
+
+/*** About Screen Styles ***/
+
+#about {
+  background-color: rgba(0, 0, 0, 0.95);
+  width: 90%;
+  padding-top: 1em;
+  padding-bottom: 3em;
+  margin-top: -1px;
+}
+
+#about h3 {
+  color: #D16515;
+}
+
+#about p {
+  font-size: 18px;
+  text-align: justify;
+}
+
+.about-section {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.25em;
+}
+
+/*** Portfolio Screen Styles ***/
+
+#portfolio {
+  background-color: rgba(0, 0, 0, 0.95);
+  width: 90%;
+  padding-top: 1em;
+  padding-bottom: 3em;
+  margin-top: -1px;
+}
+
+#portfolio h3 {
+  color: #8F75D1;
+  margin-bottom: 0.5em;
+}
+
+#portfolio p {
+  font-size: 14px;
+  text-align: center;
+}
+
+#portfolio h3,
+.portfolio-item {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.portfolio-item {
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#portfolio a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#portfolio a:hover {
+  color: #8F75D1;
+  opacity: 0.5;
+}
+
+#portfolio img {
+  width: 90%;
+  border: solid white 5px;
+  border-radius: 5px;
+}
+
+/*** Contact Screen Styles ***/
+
+#contact {
+  background-color: rgba(0, 0, 0, 0.95);
+  width: 90%;
+  padding-top: 1em;
+  padding-bottom: 3em;
+  margin-top: -1px;
+}
+
+#contact h3 {
+  color: #43C4D1;
+  font-size: 22px;
+  padding-left: 1em;
+}
+
+#contact h3,
+.contact-section {
+  padding-right: 1em;
+  padding-bottom: 0.25em;
+}
+
+.contact-section {
+  padding-left: 2.5em;
+}
+
+address p {
+  font-family: 'Alice', serif;
+  font-size: 16px;
+  font-style: normal;
+}
+
+#contact a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#contact a:hover {
+  color: #43C4D1;
+  opacity: 0.5;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+   @media screen and (orientation:portrait) {
+     #landscape-header {
+       display: none;
+     }
+}
+   @media screen and (orientation:landscape) {
+     header {
+       display: none;
+     }
+
+     .top-section {
+       height: fit-content(100%);
+     }
+
+   }
+
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
