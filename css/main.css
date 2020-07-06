@@ -286,6 +286,10 @@ copyright {
   flex: auto;
 }
 
+#about-wrapper.bottom-section copyright {
+  position: relative;
+}
+
 /*** Portfolio Screen Styles ***/
 
 #portfolio {
@@ -476,12 +480,7 @@ address p {
      header {
        display: none;
      }
-
-     .top-section {
-       height: fit-content(100%);
-     }
-
-   }
+}
 
 
 @media print,
