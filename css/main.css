@@ -278,6 +278,14 @@ copyright {
   padding-bottom: 0.25em;
 }
 
+#about-wrapper.main-content {
+  flex: auto;
+}
+
+#about-wrapper.bottom-section {
+  flex: auto;
+}
+
 /*** Portfolio Screen Styles ***/
 
 #portfolio {
