@@ -105,6 +105,7 @@ body {
 
 .main-content {
   flex: 0 1 auto;
+  position: relative;
 }
 
 .top-section {
@@ -182,7 +183,7 @@ nav ul li a {
   margin: 0;
   position: absolute;
   top: 2em;
-  right: 10em;
+  right: 10.5em;
 }
 
 header {
@@ -213,6 +214,7 @@ h3 {
 h4 {
   font-family: 'Fredericka the Great', cursive;
   font-size: 20px;
+  margin-bottom: 0;
 }
 
 p {
@@ -263,19 +265,86 @@ copyright {
   margin-top: -1px;
 }
 
-#about h3 {
+#landscape-about,
+#landscape-portfolio {
+  position: absolute;
+  left: 0;
+  bottom: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-bottom: 1.5em;
+  padding-top: 0.5em;
+  padding-left: 2em;
+  height: 45%;
+}
+
+#landscape-contact {
+  position: absolute;
+  left: 0;
+  bottom: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-bottom: 1.5em;
+  padding-top: 0.5em;
+  padding-left: 2em;
+  height: 41.5%;
+}
+
+#landscape-portfolio,
+#landscape-contact {
+  flex-wrap: wrap;
+}
+
+#landscape-portfolio a img {
+  width: 100%;
+  border: solid white 5px;
+  border-radius: 5px;
+}
+
+#about h3,
+#landscape-about h3 {
   color: #D16515;
+}
+
+#about p,
+#landscape-about p {
+  text-align: justify;
 }
 
 #about p {
   font-size: 18px;
-  text-align: justify;
+}
+
+#landscape-about h3,
+#landscape-portfolio h3,
+#landscape-contact h3 {
+  font-size: 1.5em;
+}
+
+#landscape-portfolio h3,
+#landscape-contact h3 {
+  width: 100%;
+  padding-left: 2em;
 }
 
 .about-section {
   padding-left: 1em;
   padding-right: 1em;
   padding-bottom: 0.25em;
+}
+
+#landscape-about .about-section,
+#landscape-portfolio .portfolio-item,
+#landscape-contact .contact-section {
+  width: 33%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 3em;
 }
 
 #about-wrapper.main-content {
@@ -300,9 +369,13 @@ copyright.content-page {
   margin-top: -1px;
 }
 
-#portfolio h3 {
+#portfolio h3,{
   color: #8F75D1;
   margin-bottom: 0.5em;
+}
+
+#landscape-portfolio h3 {
+  color: #8F75D1;
 }
 
 #portfolio p {
@@ -350,36 +423,86 @@ copyright.content-page {
   margin-top: -1px;
 }
 
+#landscape-contact {
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+
 #contact h3 {
   color: #43C4D1;
   font-size: 22px;
   padding-left: 1em;
 }
 
+#landscape-contact h3 {
+  color: #43C4D1;
+}
+
 #contact h3,
+#landscape-contact h3,
 .contact-section {
   padding-right: 1em;
   padding-bottom: 0.25em;
 }
 
+#landscape-contact h4 {
+    width: 100%;
+    font-size: 24px;
+}
+
+#landscape-contact .email {
+  padding-left: 8em;
+}
+
+#landscape-contact .social {
+  padding-left: 4.5em;
+}
+
 .contact-section {
-  padding-left: 2.5em;
+  padding-left: 1.5em;
 }
 
 address p {
   font-family: 'Alice', serif;
-  font-size: 16px;
+  font-size: 1.25em;
   font-style: normal;
+  padding-top: 0.25em;
 }
 
-#contact a {
+#landscape-contact address p {
+  font-size: 1.5em;
+}
+
+#contact a,
+#landscape-contact a {
   text-decoration: none;
   color: #ffffff;
 }
 
-#contact a:hover {
+#contact a:hover,
+#landscape-contact a:hover {
   color: #43C4D1;
   opacity: 0.5;
+}
+
+#contact address i,
+#landscape-contact address i {
+  padding-right: 0.5em
+}
+
+#contact .social,
+#landscape-contact .social {
+  font-size: 2em;
+}
+
+.social-icons {
+  margin: 24px 0;
+  padding-top: 6px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 
@@ -475,11 +598,121 @@ address p {
      #landscape-header {
        display: none;
      }
-}
-   @media screen and (orientation:landscape) {
-     header {
+
+     #landscape-about {
        display: none;
      }
+
+     #landscape-portfolio {
+       display:none;
+     }
+
+     #landscape-contact {
+       display: none;
+     }
+
+   }
+
+   @media screen and (max-width: 1199px) {
+     #landscape-about {
+       display: none;
+     }
+
+     #landscape-portfolio {
+       display: none;
+     }
+
+     #landscape-header {
+       display: none;
+     }
+
+     #landscape-contact {
+       display: none;
+     }
+
+   }
+
+   @media screen and (orientation:landscape) {
+     }
+     nav {
+       padding-left: 0;
+       padding-right: 0;
+     }
+
+}
+
+@media screen and (orientation: landscape) and (min-width: 768px) {
+
+    nav {
+      justify-content: flex-end;
+    }
+
+    nav ul {
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+      margin-bottom: 0.5em;
+    }
+
+    nav ul li {
+      padding-bottom: 2.5em;
+    }
+
+    #about .about-section {
+      padding-left: 3em;
+      padding-right: 3em;
+    }
+
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1200px) {
+
+  header {
+    display: none;
+  }
+
+  #landscape-header {
+    top: 5em;
+    right: 18em;
+  }
+
+  #landscape-header h1 {
+    font-size: 65px;
+  }
+
+  #landscape-header h2 {
+    font-size: 50px;
+  }
+
+  #about {
+    display: none;
+  }
+
+  #portfolio {
+    display: none;
+  }
+
+  #contact {
+    display: none;
+  }
+
+  nav {
+    justify-content: flex-end;
+  }
+
+  nav ul {
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-bottom: 2.5em;
+  }
+
+  nav ul li {
+    padding-bottom: 3.5em;
+  }
+
+  nav ul li a {
+    font-size: 1.5em;
+  }
+
 }
 
 
